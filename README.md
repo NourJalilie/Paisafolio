@@ -64,21 +64,47 @@ Entretenerse mientras entiende el estilo y personalidad del autor. Encontrar alg
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="img/antecedente1.png" width="180"><br>
+      <img src="img/antecedente1.png" width="500"><br>
       <b>¿Qué es?</b><br>Portafolio narrativo interactivo.<br>
       <b>Fuente:</b> <a href="https://uxdesign.cc">uxdesign.cc</a><br>
       <b>Positivos:</b> Inmersivo, original.<br>
       <b>Negativos:</b> Puede distraer.
     </td>
     <td align="center" width="33%">
-      <img src="img/antecedente2.png" width="180"><br>
+      <img src="img/antecedente2.png" width="500"><br>
       <b>¿Qué es?</b><br>Plataforma educativa gamificada.<br>
       <b>Fuente:</b> <a href="https://behance.net">behance.net</a><br>
       <b>Positivos:</b> Motivadora.<br>
       <b>Negativos:</b> Exige desarrollo alto.
     </td>
     <td align="center" width="33%">
-      <img src="img/antecedente3.png" width="180"><br>
+      <img src="img/antecedente3.png" width="500"><br>
+      <b>¿Qué es?</b><br>Mapa visual de procesos.<br>
+      <b>Fuente:</b> <a href="https://dribbble.com">dribbble.com</a><br>
+      <b>Positivos:</b> Claridad visual.<br>
+      <b>Negativos:</b> Escasa interacción.
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="img/antecedente4.png" width="500"><br>
+      <b>¿Qué es?</b><br>Portafolio narrativo interactivo.<br>
+      <b>Fuente:</b> <a href="https://uxdesign.cc">uxdesign.cc</a><br>
+      <b>Positivos:</b> Inmersivo, original.<br>
+      <b>Negativos:</b> Puede distraer.
+    </td>
+    <td align="center" width="33%">
+      <img src="img/antecedente5.gif" width="300"><br>
+      <b>¿Qué es?</b><br>Plataforma educativa gamificada.<br>
+      <b>Fuente:</b> <a href="https://behance.net">behance.net</a><br>
+      <b>Positivos:</b> Motivadora.<br>
+      <b>Negativos:</b> Exige desarrollo alto.
+    </td>
+    <td align="center" width="33%">
+      <img src="img/antecedente6.png" width="500"><br>
       <b>¿Qué es?</b><br>Mapa visual de procesos.<br>
       <b>Fuente:</b> <a href="https://dribbble.com">dribbble.com</a><br>
       <b>Positivos:</b> Claridad visual.<br>
