@@ -60,6 +60,7 @@ Entretenerse mientras entiende el estilo y personalidad del autor. Encontrar alg
 </p>
 
 ## Antecedentes
+Los siguientes antecedentes fueron seleccionados por su diagramación, visualización de información, narrativa/interactividad, entre otros.
 <table>
   <tr>
     <td valign="top"  align="center" width="33%">
@@ -129,4 +130,5 @@ Entretenerse mientras entiende el estilo y personalidad del autor. Encontrar alg
 </table>
 
 ## Referentes
+Estos referentes se enfocan en diferentes tipos de ilustraciones y formas de visualizar información que me interesaría recrear y utilizar en la narrativa de mi portafolio, así como tambien me inspiran para diseñar y sistematizar mi propia forma de llevarlos (mis visitantes) a través de mi proceso.
 <img src="img/moodboard.png"  align="center" alt="moodboard" />
