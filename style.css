@@ -1,37 +1,153 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik+Mono+One&display=swap');
 
-.body{
+body{
   background: #FFF6EB;
   color: #423D37;
-  font-family: "Rubik Spray Paint", system-ui;
+}
+
+h1{
+  font-family: "Rubik Mono One", monospace;
   font-weight: 400;
   font-style: normal;
+  padding-top: -10px;
 }
 
-.contenedor-svg {
+h2{
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  margin-top: 0;
+}
+
+p{
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  margin-top: 0;
+}
+
+.hero-logo {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 15px;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  padding-top: 15px;
 }
 
-.contenedor-svg img {
-  flex-shrink: 0;
-  width: 50px;
-  height: 50px;
+.logo-grande {
+  width: 400px;
+  height: 400px;
 }
 
-.contenedor-svg p {
-  margin: 0;
-  font-size: 16px;
-  color: #2D3142;
+.contenido {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
 }
-```
 
-**Estructura de archivos:**
-```
-tu-proyecto/
-│
-├── index.html
-├── style.css
-└── imagenes/
-    └── tu-logo.svg
+.contenido h2 {
+  margin-bottom: 20px;
+  color: #423D37;
+}
+
+.contenido p {
+  margin-bottom: 40px;
+  color: #423D37;
+  line-height: 1.6;
+}
+
+.contenedor-botones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: wrap; 
+}
+
+.boton1 {
+  padding: 15px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #423D37;
+  background-color: #FFF6EB;
+  stroke: 5px;
+  stroke-color: #EF8354;
+  border-radius: 25px; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton2 {
+  padding: 15px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #423D37;
+  background-color: #E8D7C3;
+  border: none;
+  border-radius: 25px; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton3 {
+  padding: 15px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFF6EB;
+  background-color: #423D37;
+  border: none;
+  border-radius: 25px; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contenedor-tipografias {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  flex-wrap: wrap; /* Para que se adapten en móviles */
+}
+
+.tipografia-box {
+  flex: 1;
+  max-width: 400px;
+  padding: 30px;
+  background-color: #423D37;
+  border: 2px solid #E8D7C3;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.tipografia-box h3 {
+  margin-bottom: 15px;
+  color: #FFF6EB;
+  font-size: 1.2rem;
+}
+
+.fuente-titulos {
+  font-family: "Nunito Sans", sans-serif;
+  color: #FFF6EB;
+  margin: 10px 0;
+}
+
+.fuente-titulos h1 {
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+.fuente-cuerpo {
+  font-family: 'Inter', sans-serif;
+  color: #FFF6EB;
+  margin: 10px 0;
+}
+
+.fuente-cuerpo h1 {
+  font-size: 3rem;
+  margin: 20px 0;
+}
