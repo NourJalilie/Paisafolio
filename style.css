@@ -1,1 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap');
 
+.body{
+  background: #FFF6EB;
+  color: #423D37;
+  font-family: "Rubik Spray Paint", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.contenedor-svg {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contenedor-svg img {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.contenedor-svg p {
+  margin: 0;
+  font-size: 16px;
+  color: #2D3142;
+}
+```
+
+**Estructura de archivos:**
+```
+tu-proyecto/
+│
+├── index.html
+├── style.css
+└── imagenes/
+    └── tu-logo.svg
