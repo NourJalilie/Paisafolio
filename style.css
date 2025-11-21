@@ -128,10 +128,11 @@ p{
   margin-bottom: 15px;
   color: #FFF6EB;
   font-size: 1.2rem;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .fuente-titulos {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Rubik Mono One", monospace;
   color: #FFF6EB;
   margin: 10px 0;
 }
@@ -142,7 +143,7 @@ p{
 }
 
 .fuente-cuerpo {
-  font-family: 'Inter', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   color: #FFF6EB;
   margin: 10px 0;
 }
