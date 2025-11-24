@@ -7,7 +7,7 @@ Armar la historia de mis trabajos desde su pictograma asociado y la diagramació
 ### ¿Para quiénes?
 ### **Explorador creativo** (Extremo 1)
 <p align="left">
-  <img src="img/explorador.jpg" width="200" align="left" alt="Explorador" />
+  <img src="https://github.com/NourJalilie/Paisafolio/raw/main/img/explorador.jpg" width="200" align="left" alt="Explorador" />
   <i><b>Demografía</b></i><br>
   Estudiante de diseño digital apasionado por la innovación y la experimentación visual, en busca de inspiración para futuros proyectos.Le interesa estar al día con el estado del arte.<br> ߉ Vive en Santiago <br>
   모 Trabaja de forma independiente o en agencia creativa.<br>
