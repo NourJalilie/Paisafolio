@@ -1,9 +1,9 @@
 # Paisafolio | Nour Jalilie Alamo
 
 ### ¿Qúe?
-Portafolio personal interactivo que permita a los *visitantes* ir armando mis trabajos para poder conocerlo. Esto sería a través de un personaje y pictogramas/iconos diseñados especificamente para mi portafolio, que en conjunto estarían "narrando" una historia. 
+Portafolio personal interactivo que permita a los *visitantes* ir entendiendo mis proyectos desde las decisiones de diseño y su formulación. Esto sería a través de un personaje (*Champi*) diseñado especificamente para mi portafolio, quién "narraría" una historia. 
 ### ¿Para qué?
-Armar la historia de mis trabajos desde su pictograma asociado y la diagramación, entregando una mayor comprensión.
+Armar la historia de mis trabajos desde su contexto y formulación y la diagramación de cómo se presenta, entregando una mayor comprensión de estos.
 ### ¿Para quiénes?
 ### **Explorador creativo** (Extremo 1)
 <p align="left">
