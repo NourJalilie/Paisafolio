@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 /* --------- RESET --------- */
 * {
@@ -15,8 +15,9 @@ body {
 }
 
 h1, h2 {
-  font-family: "Rubik Mono One", monospace;
-  font-weight: 400;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-style: normal;
   color: #4F0E01;
 }
@@ -59,9 +60,10 @@ header {
 .logo {
   color: #4F0E01;
   font-size: 26px;
-  font-family: "Rubik Mono One", monospace;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
   text-decoration: none;
-  font-weight: bold;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -167,7 +169,7 @@ nav a.active::after {
 
 /* --- Globo ¡HOLA VISITANTES! --- */
 .hero-dialog {
-  grid-column: 3 / 8;   /* columnas 3 a 10 */
+  grid-column: 3 / 9;   /* columnas 3 a 10 */
   grid-row: 1 / 4;       /* filas 2 y 3 */
   align-self: start;
 }
@@ -175,9 +177,9 @@ nav a.active::after {
 /* Contenido del globo (ya lo tenías) */
 .bubble-svg {
   position: relative;
-  width: 120%;
+  width: 100%;
   max-width: 900px; 
-  aspect-ratio: 663 / 260;
+  aspect-ratio: 663 / 256;
   margin-left: 20px;
   background-image: url("svg/dialogo.svg");
   background-repeat: no-repeat;
@@ -187,24 +189,26 @@ nav a.active::after {
 
 .bubble-svg h1 {
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
-  font-family: "Rubik Mono One", monospace;
-  font-size: clamp(26px, 3.2vw, 38px);
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-size: clamp(26px, 3.2vw, 50px);
   color: #612210;
   white-space: nowrap;
 }
 
 .bubble-svg p {
   position: absolute;
-  top: 52%;
+  top: 50%;
   left: 45%;
   transform: translateX(-50%);
   margin: 0;
-  width: 65%;
-  font-size: clamp(14px, 1.6vw, 22px);
+  width: 70%;
+  font-size: clamp(14px, 1.6vw, 24px);
   line-height: 1.4;
   color: #612210;
   text-align: center;
@@ -212,7 +216,7 @@ nav a.active::after {
 
 /* --- Mancha roja con texto (derecha) --- */
 .hero-blob {
-  grid-column: 6 / 6;   /* 8 a 12 (5 columnas) */
+  grid-column: 8 / 10;   /* 8 a 12 (5 columnas) */
   grid-row: 2 / 4;       /* filas 3,4,5,6 */
   align-self: center;
   margin-left: 90px;
@@ -221,10 +225,9 @@ nav a.active::after {
 
 .mancha-texto {
   position: relative;
-  width: clamp(750px, 80%, 1045px);
-  aspect-ratio: 1045 / 680;
-  margin-left: 20px;
-  background-image: url("img/manchas.png");
+  width: clamp(300px, 70vw, 500px);  /* Más pequeño */
+  aspect-ratio: 693 / 680;
+  background-image: url("svg/mancha-roja.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -232,15 +235,35 @@ nav a.active::after {
 
 .mancha-texto p {
   position: absolute;
-  top: 50%;
-  left: 54%;
+  top: 50%;              /* Ajustado para centrar en la mancha grande */
+  left: 55%;
   transform: translate(-50%, -50%);
-  width: 42%;
+  width: 50%;            /* Más estrecho */
   color: #FFF6EB;
   text-align: center;
-  line-height: 1.5;
-  font-size: clamp(14px, 1.6vw, 22px);
+  line-height: 1.4;
+  font-size: clamp(13px, 1.4vw, 22px);
+  font-weight: 500;
 }
+
+/* Responsive */
+@media (max-width: 700px) {
+  .hero-blob {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-right: 0;
+  }
+  
+  .mancha-texto {
+    width: clamp(300px, 85vw, 500px);
+  }
+  
+  .mancha-texto p {
+    width: 38%;
+    font-size: clamp(12px, 3vw, 16px);
+  }
+}
+
 
 /* --- Botón Viajemos + cohete (abajo izquierda) --- */
 .hero-cta {
@@ -248,7 +271,7 @@ nav a.active::after {
   grid-row: 3 / 5;      /* filas 5 y 6 */
   align-self: start;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 /* Botón + caminito (ya los tenías) */
@@ -259,9 +282,9 @@ nav a.active::after {
 
 .viajemos-trail {
   position: absolute;
-  left: -10px;
-  top: -78px;
-  width: 200px;
+  /*left: -10px;*/
+  bottom: -50px;
+  width: 220px;
   pointer-events: none;
 }
 
@@ -270,10 +293,11 @@ nav a.active::after {
   background-color: #E1B48A;
   border: 3px solid #5C2E1A;
   border-radius: 999px;
-  padding: 12px 30px;
-  font-family: "Rubik Mono One", monospace;
-  font-size: 30px;
-  font-weight: 400;
+  padding: 10px 70px;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-size: 35px;
   color: #4F0E01;
   box-shadow: 0 4px 0 #5C2E1A;
   text-decoration: none;
@@ -469,7 +493,7 @@ nav a.active::after {
 .planet-page {
   display: none;
   padding: 60px 20px;
-  max-width: 900px;
+  max-width: 1920px; 
   margin: 0 auto;
   text-align: center;
   color: #4F0E01;
@@ -491,7 +515,9 @@ nav a.active::after {
   border: none;
   border-radius: 12px;
   padding: 12px 25px;
-  font-family: "Rubik Mono One";
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   cursor: pointer;
   border-bottom: 4px solid #4F0E01;
 }
@@ -499,6 +525,29 @@ nav a.active::after {
 .back-btn:hover {
   background: #4F0E01;
 }
+
+
+/* Página interna del planeta experimental */
+#page-experimental {
+  min-height: 100vh;
+  padding: 120px 60px 60px;
+  background-image: url("img/fondo-ex.png");
+  background-size: cover;
+  background-position: center bottom;   
+  background-repeat: no-repeat;
+  display: none;
+}
+
+
+/* Caja para el contenido encima del fondo */
+#page-experimental .planet-content {
+  max-width: 900px;
+  background: rgba(255, 246, 235, 0.9); /* tu crema con transparencia */
+  border-radius: 24px;
+  padding: 24px 32px;
+  backdrop-filter: blur(4px);
+}
+
 
 
 /* --------- FOOTER / CONTACTO --------- */
@@ -651,7 +700,9 @@ nav a.active::after {
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  font-family: "Rubik Mono One", monospace;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-size: 16px;
   color: #4F0E01;
   white-space: nowrap;

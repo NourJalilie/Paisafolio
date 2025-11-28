@@ -4,25 +4,26 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Paisafolio – Munditos</title>
+    <title>Paisafolio — Munditos</title>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
   <body>
-      <!-- LOADER -->
-<!--   <div id="page-loader">
-    <div class="loader-animation">
-      <div class="loader-star"></div>
-      <div class="loader-star"></div>
-      <div class="loader-star"></div>
-      <div class="loader-star"></div>
-      
-      <img src="img/champi.jpg" alt="Cargando" class="loader-champi">
-      <img src="svg/cohete.svg" alt="" class="loader-cohete">
-      
-      <div class="loader-text">Viajando</div>
+    <!-- LOADER -->
+    <div id="page-loader">
+      <div class="loader-animation">
+        <div class="loader-star"></div>
+        <div class="loader-star"></div>
+        <div class="loader-star"></div>
+        <div class="loader-star"></div>
+        
+        <img src="img/champi.jpg" alt="Cargando" class="loader-champi">
+        <img src="svg/cohetef.svg" alt="" class="loader-cohete">
+        
+        <div class="loader-text">Viajando</div>
+      </div>
     </div>
-  </div> -->
+
     <header>
       <div class="header-container">
         <a href="index.html" class="logo">
@@ -31,7 +32,6 @@
         </a>
         <nav>
           <ul>
-            <!-- <li><a href="index.html">Home</a></li>-->
             <li><a href="sobre-mi.html">Sobre mi</a></li>
             <li><a href="munditos.html" class="active">Munditos</a></li>
             <li><a href="#contacto">Contacto</a></li>
@@ -41,17 +41,17 @@
     </header>
 
     <main>
-      <section class="section munditos-page">
+      <!-- VISTA DEL UNIVERSO (Sistema solar con planetas) -->
+      <section class="section munditos-page universe-view">
         <div class="section-inner">
           <h1>Este es mi Universo!</h1>
           <p class="universe-intro">
             Aquí podrán explorar mis diferentes hogares que he ido armando con mucho amor y dedicación. Cada uno refleja algún aprendizaje.
           </p>
 
-          <!-- Contenedor con fondo del camino -->
+          <!-- Contenedor con fondo del sistema solar -->
           <div class="mundos-wrapper">
-            <!-- Las posiciones se manejan por clases planet-xxx en el CSS -->
-
+           
             <a href="#" class="planet-link planet-experimental" data-name="El Laboratorio" data-page="experimental">
                 <img src="img/experimental.png" alt="Experimental">
             </a>
@@ -73,32 +73,44 @@
             </a>
           </div>
         </div>
-
-        <div class="planet-page" id="page-experimental">
-          <h2>El Laboratorio</h2>
-          <p>Aquí irá el contenido del planeta Experimental.</p>
-          <button class="back-btn">Volver al Universo</button>
-        </div>
-
-        <div class="planet-page" id="page-grafico">
-          <h2>La Fábrica</h2>
-          <p>Aquí irá el contenido del planeta Gráfico.</p>
-          <button class="back-btn">Volver al Universo</button>
-        </div>
-
-        <div class="planet-page" id="page-industrial">
-          <h2>El Taller</h2>
-          <p>Aquí irá el contenido del planeta Industrial.</p>
-          <button class="back-btn">Volver al Universo</button>
-        </div>
-
-        <div class="planet-page" id="page-pedidos">
-          <h2>El Viaje</h2>
-          <p>Aquí irá el contenido del planeta Pedidos.</p>
-          <button class="back-btn">Volver al Universo</button>
-        </div>
-
       </section>
+
+      <!-- PÁGINAS INTERNAS DE CADA PLANETA -->
+      
+      <div class="planet-page" id="page-experimental">
+        <h2>El Laboratorio</h2>
+        <p>Aquí irá el contenido del planeta Experimental.</p>
+        
+        <section class="proyecto">
+          <h3>Boltris — Tote bag de termofusión</h3>
+          <!-- tus imágenes y texto -->
+        </section>
+
+        <section class="proyecto">
+          <h3>Olerium — Juego de olores para la memoria</h3>
+          <!-- tus imágenes y texto -->
+        </section>
+        
+        <button class="back-btn">Volver al Universo</button>
+      </div>
+
+      <div class="planet-page" id="page-grafico">
+        <h2>La Fábrica</h2>
+        <p>Aquí irá el contenido del planeta Gráfico.</p>
+        <button class="back-btn">Volver al Universo</button>
+      </div>
+
+      <div class="planet-page" id="page-industrial">
+        <h2>El Taller</h2>
+        <p>Aquí irá el contenido del planeta Industrial.</p>
+        <button class="back-btn">Volver al Universo</button>
+      </div>
+
+      <div class="planet-page" id="page-pedidos">
+        <h2>El Viaje</h2>
+        <p>Aquí irá el contenido del planeta Pedidos.</p>
+        <button class="back-btn">Volver al Universo</button>
+      </div>
     </main>
 
     <footer id="contacto" class="footer">
@@ -113,6 +125,7 @@
         </small>
       </div>
     </footer>
+    
     <script src="script.js"></script>
   </body>
 </html>
