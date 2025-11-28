@@ -2,49 +2,106 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta name="robots" content="noindex, nofollow"> <!--Esto es para que no salga en linea mientras se construye la pag-->
+    <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sitio web en construcción</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Paisafolio – Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
+
   <body>
-
-<div class="hero-logo">
-  <img src="svg/logo.svg" alt="Logo" class="logo-grande">
-  <h1>Hola!</h1>
-  <h2>Mi pagina aun esta en desarrollo pero esto es lo que van a poder encontrar aquí</h2>
-</div>
-
-<div class="contenido">
-  <h2>Esta es mi paleta de colores</h2>
-  <p>La idea es que sea lo más neutra posible para que no compita con mis proyectos, pero manteniendo una cierta gráfica reconocible.</p>
-</div>
-
-<div class="contenedor-botones">
-  <button class="boton1">#FFF6EB</button>
-  <button class="boton2">#E8D7C3</button>
-  <button class="boton3">#423D37</button>
-</div>
-
-<div class="contenedor-tipografias">
-  <div class="tipografia-box">
-    <h3>Tipografía Títulos</h3>
-    <p class="fuente-titulos">Rubik One</p>
-    <h1 class="fuente-titulos">Aa Bb Cc</h1>
-    <p class="fuente-titulos">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-    <p class="fuente-titulos">abcdefghijklmnopqrstuvwxyz</p>
-    <p class="fuente-titulos">1234567890</p>
+      <!-- LOADER -->
+  <div id="page-loader">
+    <div class="loader-animation">
+      <div class="loader-star"></div>
+      <div class="loader-star"></div>
+      <div class="loader-star"></div>
+      <div class="loader-star"></div>
+      
+      <img src="img/champi.jpg" alt="Cargando" class="loader-champi">
+      <img src="svg/cohete.svg" alt="" class="loader-cohete">
+      
+      <div class="loader-text">Viajando</div>
+    </div>
   </div>
+    <!-- HEADER -->
+    <header>
+      <div class="header-container">
+        <a href="index.html" class="logo">
+          <img src="svg/home.svg" alt="Logo Paisafolio" class="logo-img">
+          Paisafolio
+        </a>
+        <nav>
+          <ul>
+            <!-- El logo ya actúa como "Home" -->
+            <li><a href="sobre-mi.html">Sobre mi</a></li>
+            <li><a href="munditos.html">Munditos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <div class="tipografia-box">
-    <h3>Tipografía Cuerpo</h3>
-    <p class="fuente-cuerpo">Nunito Sans</p>
-    <h1 class="fuente-cuerpo">Aa Bb Cc</h1>
-    <p class="fuente-cuerpo">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-    <p class="fuente-cuerpo">abcdefghijklmnopqrstuvwxyz</p>
-    <p class="fuente-cuerpo">1234567890</p>
+    <!-- MANCHA SUPERIOR CON CHAMPI (FONDO) -->
+    <div class="esquina">
+      <img src="svg/esquina.svg" alt="Champi esquina">
+    </div>
+
+    <!-- HERO / PORTADA -->
+    <main>
+      <section class="hero-section">
+  <div class="hero-grid">
+
+    <!-- Globo de texto ¡HOLA VISITANTES! + párrafo -->
+    <div class="hero-dialog">
+      <div class="bubble-svg">
+        <h1>¡HOLA VISITANTES!</h1>
+        <p>
+          Bienvenidos a mi mundo, yo soy <strong>Champi</strong> y me van a
+          acompañar a recorrer mi universo de munditos.
+        </p>
+      </div>
+    </div>
+
+    <!-- Mancha roja con texto a la derecha -->
+    <div class="hero-blob">
+      <div class="mancha-texto">
+        <p>
+          Si me ayudan a recorrer y viajar, podrán ver mis diferentes casitas
+          en las que voy rotando.
+        </p>
+      </div>
+    </div>
+
+    <!-- Botón Viajemos + cohete -->
+    <div class="hero-cta">
+      <div class="viajemos-wrapper">
+        <img src="svg/viajemos.svg" alt="" class="viajemos-trail">
+        <a href="munditos.html" class="btn-viajemos">Viajemos!</a>
+      </div>
+    </div>
+
   </div>
-</div>
+</section>
 
+    </main>
+
+    <!-- FOOTER / CONTACTO -->
+    <footer id="contacto" class="footer">
+      <div class="contenedor">
+        <small>© Nour Jalilie Alamo. 2022-2025</small>
+        <br>
+        <small>
+          <a href="https://www.instagram.com/paisa.dno/" class="social" target="_blank">Instagram</a> |
+          <a href="https://www.linkedin.com/in/nour-jalilie-alamo-5a618a310/" class="social" target="_blank">LinkedIn</a> |
+          <a href="mailto:nour.jalilie@uc.cl" class="social">Correo</a> |
+          <a href="https://www.behance.net/nourjalilie_" class="social" target="_blank">Behance</a>
+        </small>
+      </div>
+    </footer>
+
+
+</footer>
+
+<script src="script.js"></script>
   </body>
 </html>
