@@ -701,6 +701,14 @@ nav a.active::after {
   display: none;
 }
 
+/* Botón en la página de Olerium */
+#proj-olerium .back-btn {
+  position: fixed;           /* O absolute */
+  bottom: 40px;             /* Distancia desde abajo */
+  right: 100px;              /* Distancia desde la derecha */
+  z-index: 100;             /* Encima de todo */
+}
+
 /* --------- FOOTER / CONTACTO --------- */
 
 .footer {
