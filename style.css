@@ -529,8 +529,11 @@ nav a.active::after {
 
 /* Página interna del planeta experimental */
 #page-experimental {
-  min-height: 120vh;
-  padding: 120px 60px 60px;
+  min-height: 100vh;        /* Altura mínima de toda la pantalla */
+  width: 100%; 
+  /*height: 100%;             /* Ancho completo */
+  max-width: none;          /* Sin límite de ancho */
+  padding: 80px 40px 40px;
   background-image: url("img/fondo-ex.png");
   background-size: cover;
   background-position: center bottom;   
@@ -568,7 +571,7 @@ nav a.active::after {
 
 /* Imagen del proyecto */
 .project-link img {
-  width: 220px;       /* ajusta el tamaño que quieras */
+  width: 280px;       /* ajusta el tamaño que quieras */
   height: auto;
   transition: transform 0.2s ease, filter 0.2s ease;
   filter: drop-shadow(0 4px 0 rgba(0,0,0,0.25));
@@ -580,20 +583,9 @@ nav a.active::after {
   filter: drop-shadow(0 12px 18px rgba(0,0,0,0.35));
 }
 
-/* Nombre del proyecto bajo la imagen */
-.project-link span {
-  display: block;
-  margin-top: 8px;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 16px;
-  color: #4F0E01;
-}
-
-
-
 /* Página interna del planeta experimental */
 #page-experimental {
-  min-height: 100vh;
+  min-height: 110vh;
   padding: 120px 60px 60px;
   background-image: url("img/fondo-ex.png");
   background-size: cover;
@@ -605,7 +597,7 @@ nav a.active::after {
 /* Contenedor de proyectos dentro del planeta */
 .planet-projects {
   position: relative;
-  bottom: 70px;     
+  top: 40%;     
   left: -300px;
   display: flex;
   justify-content: center;
@@ -642,9 +634,11 @@ nav a.active::after {
 
 /* Botón "Volver al Universo" en planetas */
 #page-experimental .back-btn {
-  margin-top: 80px;
+  position: fixed;           /* O absolute */
+  bottom: 40px;             /* Distancia desde abajo */
+  right: 100px;              /* Distancia desde la derecha */
+  z-index: 100;             /* Encima de todo */
 }
-
 /* ===== PÁGINAS DE PROYECTOS (subpáginas) ===== */
 .project-page {
   display: none;
