@@ -19,50 +19,108 @@ function hideLoaderIfReady() {
   }
 }
 
-// ===== SISTEMA DE PÁGINAS INTERNAS =====
+// ===== ESPERAR A QUE CARGUE EL DOM =====
+document.addEventListener('DOMContentLoaded', function() {
 
-// Click en planetas
-document.querySelectorAll('.planet-link').forEach(planet => {
-  planet.addEventListener('click', (e) => {
-    const page = planet.dataset.page;
-    
-    // Si no tiene data-page, es un link normal (como "Sobre mi")
-    if (!page) return;
-    
-    // Prevenir navegación
-    e.preventDefault();
+  // ===== 1. CLICK EN PLANETAS =====
+  document.querySelectorAll('.planet-link').forEach(planet => {
+    planet.addEventListener('click', (e) => {
+      const page = planet.dataset.page;
+      
+      // Si no tiene data-page, es un link normal (como "Sobre mi")
+      if (!page) return;
+      
+      // Prevenir navegación
+      e.preventDefault();
 
-    // Ocultar la vista del universo
-    const universeView = document.querySelector('.universe-view');
-    if (universeView) {
-      universeView.style.display = 'none';
-    }
+      console.log('Mostrando planeta:', page);
 
-    // Ocultar todas las páginas internas
-    document.querySelectorAll('.planet-page').forEach(p => {
-      p.style.display = 'none';
+      // Ocultar universo
+      const universeView = document.querySelector('.universe-view');
+      if (universeView) {
+        universeView.style.display = 'none';
+      }
+
+      // Ocultar todas las páginas
+      document.querySelectorAll('.planet-page, .project-page').forEach(p => {
+        p.style.display = 'none';
+      });
+
+      // Mostrar el planeta seleccionado
+      const targetPage = document.querySelector(`#page-${page}`);
+      if (targetPage) {
+        targetPage.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     });
-
-    // Mostrar la página seleccionada
-    const targetPage = document.querySelector(`#page-${page}`);
-    if (targetPage) {
-      targetPage.style.display = 'block';
-    }
   });
-});
 
-// Botones "Volver al Universo"
-document.querySelectorAll('.back-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    // Ocultar todas las páginas internas
-    document.querySelectorAll('.planet-page').forEach(p => {
-      p.style.display = 'none';
+  // ===== 2. CLICK EN PROYECTOS =====
+  document.querySelectorAll('.project-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const projectId = link.dataset.project;
+      
+      console.log('Mostrando proyecto:', projectId);
+
+      // Ocultar todo
+      document.querySelectorAll('.planet-page, .project-page').forEach(p => {
+        p.style.display = 'none';
+      });
+
+      // Mostrar el proyecto
+      const projectPage = document.querySelector(`#proj-${projectId}`);
+      if (projectPage) {
+        projectPage.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        console.log('Proyecto mostrado');
+      } else {
+        console.error('No se encontró el proyecto:', `#proj-${projectId}`);
+      }
     });
-
-    // Mostrar la vista del universo
-    const universeView = document.querySelector('.universe-view');
-    if (universeView) {
-      universeView.style.display = 'block';
-    }
   });
+
+  // ===== 3. BOTONES VOLVER =====
+  document.querySelectorAll('.back-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const currentPage = btn.closest('.planet-page, .project-page');
+
+      console.log('Click en volver desde:', currentPage ? currentPage.id : 'desconocido');
+
+      // CASO 1: Estamos en un PROYECTO
+      if (currentPage && currentPage.classList.contains('project-page')) {
+        const parentPlanet = currentPage.dataset.parent;
+        console.log('Volver al planeta:', parentPlanet);
+
+        // Ocultar proyecto
+        currentPage.style.display = 'none';
+
+        // Mostrar planeta padre
+        const planetPage = document.querySelector(`.planet-page[data-planet="${parentPlanet}"]`);
+        if (planetPage) {
+          planetPage.style.display = 'block';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        return;
+      }
+
+      // CASO 2: Estamos en un PLANETA
+      if (currentPage && currentPage.classList.contains('planet-page')) {
+        console.log('Volver al universo');
+
+        // Ocultar todo
+        document.querySelectorAll('.planet-page, .project-page').forEach(p => {
+          p.style.display = 'none';
+        });
+
+        // Mostrar universo
+        const universe = document.querySelector('.universe-view');
+        if (universe) {
+          universe.style.display = 'block';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        return;
+      }
+    });
+  });
+
 });

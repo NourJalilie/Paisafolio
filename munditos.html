@@ -77,36 +77,40 @@
 
       <!-- PÁGINAS INTERNAS DE CADA PLANETA -->
       
-      <div class="planet-page" id="page-experimental">
+      <div class="planet-page" id="page-experimental" data-planet="experimental">
         <h2>El Laboratorio</h2>
         <p>Aquí irá el contenido del planeta Experimental.</p>
         
-        <section class="proyecto">
-          <h3>Boltris — Tote bag de termofusión</h3>
-          <!-- tus imágenes y texto -->
-        </section>
+        <div class="planet-projects">
+          <!-- OLERIUM -->
+          <button class="project-link" data-project="olerium">
+            <img src="img/olerium.png" alt="Olerium — Juego de olores para la memoria">
+          </button>
+        </div>
 
-        <section class="proyecto">
-          <h3>Olerium — Juego de olores para la memoria</h3>
-          <!-- tus imágenes y texto -->
-        </section>
-        
         <button class="back-btn">Volver al Universo</button>
       </div>
 
-      <div class="planet-page" id="page-grafico">
+      <!-- PÁGINA DEL PROYECTO OLERIUM -->
+      <div class="project-page" id="proj-olerium" data-parent="experimental">
+<!--         <h2>Olerium — Juego de olores para la memoria</h2>
+        <p>Aquí irá el contenido del proyecto Olerium.</p> -->
+        <button class="back-btn">Volver al Planeta</button>
+      </div>
+
+      <div class="planet-page" id="page-grafico" data-planet="grafico">
         <h2>La Fábrica</h2>
         <p>Aquí irá el contenido del planeta Gráfico.</p>
         <button class="back-btn">Volver al Universo</button>
       </div>
 
-      <div class="planet-page" id="page-industrial">
+      <div class="planet-page" id="page-industrial" data-planet="industrial">
         <h2>El Taller</h2>
         <p>Aquí irá el contenido del planeta Industrial.</p>
         <button class="back-btn">Volver al Universo</button>
       </div>
 
-      <div class="planet-page" id="page-pedidos">
+      <div class="planet-page" id="page-pedidos" data-planet="pedidos">
         <h2>El Viaje</h2>
         <p>Aquí irá el contenido del planeta Pedidos.</p>
         <button class="back-btn">Volver al Universo</button>

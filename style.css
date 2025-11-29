@@ -129,14 +129,14 @@ nav a.active::after {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;        /* ocupa todo el ancho */
-  z-index: 1;         /* detrás del contenido, delante del fondo */
+  z-index: 1;        /* detrás del contenido principal */
   pointer-events: none;
 }
 
+/* Mancha roja */
 .esquina img {
   display: block;
-  width: 28%;
+  width: clamp(260px, 28vw, 520px);
   height: auto;
 }
 
@@ -375,8 +375,8 @@ nav a.active::after {
   width: 120%;
   left: 50%;
   transform: translateX(-50%);   
-  margin-top: 50px;
-  aspect-ratio: 2000 / 1100;  
+  margin-top: 100px;
+  aspect-ratio: 2294 / 1064;  
   background-image: url("svg/sistema.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -387,7 +387,7 @@ nav a.active::after {
 /* Ajustes por porcentaje, se escalan con el contenedor */
 .planet-experimental { top: 10%; left: 13%; }
 .planet-grafico      { top: 45%; right: 10%; }
-.planet-industrial   { bottom: 5%; left: 5%; }
+.planet-industrial   { bottom: 0%; left: 0%; }
 .planet-pedidos      { bottom: 55%; right: 23%; }
 .planet-home         { top: 33%; left: 42%; } 
 
@@ -529,7 +529,7 @@ nav a.active::after {
 
 /* Página interna del planeta experimental */
 #page-experimental {
-  min-height: 100vh;
+  min-height: 120vh;
   padding: 120px 60px 60px;
   background-image: url("img/fondo-ex.png");
   background-size: cover;
@@ -541,14 +541,165 @@ nav a.active::after {
 
 /* Caja para el contenido encima del fondo */
 #page-experimental .planet-content {
-  max-width: 900px;
+  max-width: 850px;
   background: rgba(255, 246, 235, 0.9); /* tu crema con transparencia */
   border-radius: 24px;
-  padding: 24px 32px;
+  padding: 2px 32px;
   backdrop-filter: blur(4px);
 }
 
+/* Contenedor de proyectos dentro del planeta */
+.planet-projects {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
 
+/* Botón que envuelve la imagen del proyecto */
+.project-link {
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: center;
+  cursor: url("svg/cohetef.svg") 40 40, pointer; /* respeta tu cursor especial */
+}
+
+/* Imagen del proyecto */
+.project-link img {
+  width: 220px;       /* ajusta el tamaño que quieras */
+  height: auto;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  filter: drop-shadow(0 4px 0 rgba(0,0,0,0.25));
+}
+
+/* “Salto” en hover */
+.project-link:hover img {
+  transform: translateY(-10px) scale(1.05);
+  filter: drop-shadow(0 12px 18px rgba(0,0,0,0.35));
+}
+
+/* Nombre del proyecto bajo la imagen */
+.project-link span {
+  display: block;
+  margin-top: 8px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  color: #4F0E01;
+}
+
+
+
+/* Página interna del planeta experimental */
+#page-experimental {
+  min-height: 100vh;
+  padding: 120px 60px 60px;
+  background-image: url("img/fondo-ex.png");
+  background-size: cover;
+  background-position: center bottom;   
+  background-repeat: no-repeat;
+  display: none;
+}
+
+/* Contenedor de proyectos dentro del planeta */
+.planet-projects {
+  position: relative;
+  bottom: 70px;     
+  left: -300px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  z-index: 10;
+  padding-bottom: 50px;
+}
+
+/* Botón que envuelve la imagen del proyecto */
+.project-link {
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: center;
+  cursor: url("svg/cohetef.svg") 40 40, pointer;
+  position: relative;
+}
+
+/* Imagen del proyecto */
+.project-link img {
+  width: 200px;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+/* Efecto hover en la imagen */
+.project-link:hover img {
+  transform: translateY(-10px) scale(1.05);
+  filter: drop-shadow(0 12px 20px rgba(0,0,0,0.4));
+}
+
+
+/* Botón "Volver al Universo" en planetas */
+#page-experimental .back-btn {
+  margin-top: 80px;
+}
+
+/* ===== PÁGINAS DE PROYECTOS (subpáginas) ===== */
+.project-page {
+  display: none;
+  padding: 100px 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: #4F0E01;
+  min-height: 80vh;
+}
+
+.project-page h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 20px;
+  color: #4F0E01;
+}
+
+.project-page p {
+  font-size: clamp(16px, 2vw, 20px);
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* Responsive para proyectos */
+@media (max-width: 768px) {
+  .planet-projects {
+    margin-top: -100px;
+  }
+  
+  .project-link img {
+    width: 160px;
+  }
+  
+  #page-experimental .back-btn {
+    margin-top: 60px;
+  }
+  
+  .project-page {
+    padding: 80px 20px 40px;
+  }
+}
+
+#proj-olerium {
+  min-height: 100vh;        /* Altura mínima de toda la pantalla */
+  width: 100%; 
+  /*height: 100%;             /* Ancho completo */
+  max-width: none;          /* Sin límite de ancho */
+  padding: 120px 60px 60px;
+  background-image: url("img/olerium2.png");
+  background-size: cover;   /* Cubre todo el espacio */
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none;
+}
 
 /* --------- FOOTER / CONTACTO --------- */
 
@@ -748,4 +899,9 @@ nav a.active::after {
   .loader-text {
     font-size: 14px;
   }
+}
+
+.back-btn,
+.planet-page .back-btn {
+  cursor: url("svg/cohetef.svg") 40 40, pointer;
 }
