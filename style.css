@@ -639,7 +639,7 @@ nav a.active::after {
 
 
 /* Botón "Volver al Universo" en planetas */
-#page-experimental .back-btn {
+.planet-page .back-btn {
   position: fixed;           /* O absolute */
   bottom: 40px;             /* Distancia desde abajo */
   right: 100px;              /* Distancia desde la derecha */
@@ -708,7 +708,7 @@ display: none;
   padding: 10px 40px;
   border-radius: 100px;        /* forma de cápsula */
   font-family: "Nunito", sans-serif;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 36px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.15);
   position: absolute;
@@ -727,6 +727,12 @@ h3 {
   font-size: 28px;
   position: absolute;
   left: 40px;
+}
+
+.descripcion{
+  max-width: 600px;     /* Controla el ancho del texto */
+  margin-left: 50%;     /* Lo empuja hacia la derecha */
+  text-align: left;
 }
 
 
@@ -759,7 +765,7 @@ display: none;
   padding: 10px 40px;
   border-radius: 100px;        /* forma de cápsula */
   font-family: "Nunito", sans-serif;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 36px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.15);
   position: absolute;
@@ -786,6 +792,18 @@ h3 {
   right: 100px;              /* Distancia desde la derecha */
   z-index: 100;             /* Encima de todo */
 }
+
+#page-grafico {
+  min-height: 165vh;
+  width: 100%;
+  padding: 50px 60px 60px;
+  background-image: url("img/fondo-gr.png");
+  background-size: cover;
+  background-position: center bottom;   
+  background-repeat: no-repeat;
+  display: none;
+}
+
 
 /* --------- FOOTER / CONTACTO --------- */
 
