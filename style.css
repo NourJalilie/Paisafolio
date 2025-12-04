@@ -596,14 +596,11 @@ nav a.active::after {
 
 /* Contenedor de proyectos dentro del planeta */
 .planet-projects {
-  position: relative;
-  top: 40%;     
-  left: -300px;
+  margin-top: 60px;
   display: flex;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-  z-index: 10;
   padding-bottom: 50px;
 }
 
@@ -615,6 +612,15 @@ nav a.active::after {
   text-align: center;
   cursor: url("svg/cohetef.svg") 40 40, pointer;
   position: relative;
+  /*transform: translateX(-200px);  */
+}
+
+.project-link[data-project="olerium"] {
+  transform: translateX(-200px);
+}
+
+.project-link[data-project="boltris"] {
+  transform: translate(150px, -100px);
 }
 
 /* Imagen del proyecto */
@@ -683,20 +689,98 @@ nav a.active::after {
 }
 
 #proj-olerium {
-  min-height: 100vh;        /* Altura mínima de toda la pantalla */
-  width: 100%; 
-  /*height: 100%;             /* Ancho completo */
-  max-width: none;          /* Sin límite de ancho */
-  padding: 120px 60px 60px;
-  background-image: url("img/olerium2.png");
-  background-size: cover;   /* Cubre todo el espacio */
-  background-position: center;
-  background-repeat: no-repeat;
-  display: none;
+min-height: 100vh; 
+width: 100%; 
+max-width: none; 
+padding: 120px 60px 60px; 
+background-image: url("img/olerium2.png"); 
+background-position: -100px 0px; 
+background-repeat: no-repeat; 
+display: none;
 }
+
+
+.titulo-badge{
+  /*display: inline-block;*/
+  background: rgba(255,246,235,0.7);
+  border: 3px solid #4F0E01;   /* tu café oscuro */
+  color: #4F0E01;
+  padding: 10px 40px;
+  border-radius: 100px;        /* forma de cápsula */
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  position: absolute;
+  top: 80px;
+  left: 50px;
+}
+
+h3 {
+  background: rgba(255,246,235,0.7);
+  border: 3px solid #4F0E01;   /* tu café oscuro */
+  color: #4F0E01;
+  border-radius: 100px;
+  padding: 5px 5px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  position: absolute;
+  left: 40px;
+}
+
 
 /* Botón en la página de Olerium */
 #proj-olerium .back-btn {
+  position: fixed;           /* O absolute */
+  bottom: 40px;             /* Distancia desde abajo */
+  right: 100px;              /* Distancia desde la derecha */
+  z-index: 100;             /* Encima de todo */
+}
+
+#proj-boltris {
+min-height: 100vh; 
+width: 100%; 
+max-width: none; 
+padding: 120px 60px 60px; 
+background-image: url("img/boltris2.png");
+background-size: 46%; 
+background-position: left top; 
+background-repeat: no-repeat; 
+display: none;
+}
+
+
+.titulo-badge{
+  /*display: inline-block;*/
+  background: rgba(255,246,235,0.7);
+  border: 3px solid #4F0E01;   /* tu café oscuro */
+  color: #4F0E01;
+  padding: 10px 40px;
+  border-radius: 100px;        /* forma de cápsula */
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  position: absolute;
+  top: 80px;
+  left: 50px;
+}
+
+h3 {
+  background: rgba(255,246,235,0.7);
+  border: 3px solid #4F0E01;   /* tu café oscuro */
+  color: #4F0E01;
+  border-radius: 100px;
+  padding: 5px 5px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  position: absolute;
+  left: 40px;
+}
+
+#proj-boltris .back-btn {
   position: fixed;           /* O absolute */
   bottom: 40px;             /* Distancia desde abajo */
   right: 100px;              /* Distancia desde la derecha */
