@@ -123,11 +123,44 @@
         <button class="back-btn">Volver al Universo</button>
       </div>
 
+      <!-- PLANETA INDUSTRIAL -->
       <div class="planet-page" id="page-industrial" data-planet="industrial">
         <h2>El Taller</h2>
         <p>En este mundo me encargo de realizar todas las innovaciones que requieran ensuciarse las manitos.</p>
+
+        <div class="planet-projects">
+          <button class="project-link" data-project="kachow">
+            <img src="img/kachow.png" alt="Kachow">
+          </button>
+
+          <button class="project-link" data-project="lampara">
+            <img src="img/lampara.png" alt="Lámpara">
+          </button>
+        </div>
+
         <button class="back-btn">Volver al Universo</button>
       </div>
+
+      <!-- PÁGINA DEL PROYECTO KACHOW -->
+      <div class="project-page" id="proj-kachow" data-parent="industrial">
+        <h2 class="titulo-badge">Kachow</h2>
+        <h3>Las bolsas nunca se vieron tan bien</h3>
+        <div class="descripcion">
+          <p>…texto del proyecto Kachow…</p>
+        </div>
+        <button class="back-btn">Volver al Planeta</button>
+      </div>
+
+      <!-- PÁGINA DEL PROYECTO LÁMPARA (si la vas a usar) -->
+      <div class="project-page" id="proj-lampara" data-parent="industrial">
+        <h2 class="titulo-badge">Lámpara</h2>
+        <h3>Subtítulo de la lámpara</h3>
+        <div class="descripcion">
+          <p>…texto del proyecto lámpara…</p>
+        </div>
+        <button class="back-btn">Volver al Planeta</button>
+      </div>
+
 
       <div class="planet-page" id="page-pedidos" data-planet="pedidos">
         <h2>El Viaje</h2>
