@@ -887,6 +887,86 @@ display: none;
   z-index: 100;             /* Encima de todo */
 }
 
+h3 {
+  background: rgba(255,246,235,0.7);
+  border: 3px solid #4F0E01;   /* tu café oscuro */
+  color: #4F0E01;
+  border-radius: 100px;
+  padding: 5px 5px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  position: absolute;
+  left: 40px;
+}
+
+.descripcion{
+  max-width: 600px;     /* Controla el ancho del texto */
+  margin-left: 50%;     /* Lo empuja hacia la derecha */
+  text-align: left;
+}
+
+#page-pedidos {
+  min-height: 140vh;
+  width: 100%;
+  padding: 50px 60px 60px;
+  background-image: url("img/fondo-p.png");
+  background-size: cover;
+  background-position: center bottom;   
+  background-repeat: no-repeat;
+  display: none;
+}
+
+.project-link {
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: center;
+  cursor: url("svg/cohetef.svg") 40 40, pointer;
+  position: relative;
+  /*transform: translateX(-200px);  */
+}
+
+.project-link[data-project="bolsa"] {
+  transform: translate(-150px, 250px);
+}
+
+.project-link[data-project="cartas"] {
+  transform: translate(45px, 300px);
+}
+
+/* Imagen del proyecto */
+.project-link img {
+  width: 250px;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+/* Efecto hover en la imagen */
+.project-link:hover img {
+  transform: translateY(-10px) scale(1.05);
+  filter: drop-shadow(0 12px 20px rgba(0,0,0,0.4));
+}
+
+#proj-bolsa {
+min-height: 100vh; 
+width: 100%; 
+max-width: none; 
+padding: 120px 60px 60px; 
+background-image: url("img/bolsa.png"); 
+background-position: -50px 0px; 
+background-repeat: no-repeat; 
+display: none;
+}
+
+#proj-bolsa .back-btn {
+  position: fixed;           /* O absolute */
+  bottom: 40px;             /* Distancia desde abajo */
+  right: 100px;              /* Distancia desde la derecha */
+  z-index: 100;             /* Encima de todo */
+}
+
 
 h3 {
   background: rgba(255,246,235,0.7);
@@ -906,6 +986,46 @@ h3 {
   margin-left: 50%;     /* Lo empuja hacia la derecha */
   text-align: left;
 }
+
+#proj-cartas {
+min-height: 120vh; 
+width: 100%; 
+max-width: none; 
+padding: 120px 60px 60px; 
+background-image: url("img/cartas.png"); 
+background-position: -160px 0px; 
+background-repeat: no-repeat; 
+display: none;
+}
+
+#proj-cartas .back-btn {
+  position: fixed;           /* O absolute */
+  bottom: 40px;             /* Distancia desde abajo */
+  right: 100px;              /* Distancia desde la derecha */
+  z-index: 100;             /* Encima de todo */
+}
+
+
+h3 {
+  background: rgba(255,246,235,0.7);
+  border: 3px solid #4F0E01;   /* tu café oscuro */
+  color: #4F0E01;
+  border-radius: 100px;
+  padding: 5px 5px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  position: absolute;
+  left: 40px;
+}
+
+.descripcion{
+  max-width: 600px;     /* Controla el ancho del texto */
+  margin-left: 50%;     /* Lo empuja hacia la derecha */
+  text-align: left;
+}
+
+
 
 
 /* --------- FOOTER / CONTACTO --------- */
